@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDF30B3A-15CA-4273-9838-19DDAB714F0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIDICrossApp</RootNamespace>
+    <AssemblyName>MIDICrossApp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>MidiIco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sanford.Collections, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Sanford.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Timers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Sanford.Multimedia.Timers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Threading, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Sanford.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MidiDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Midi\ChannelChaser.cs" />
+    <Compile Include="Midi\ChannelMessage.cs" />
+    <Compile Include="Midi\ChannelMessageBuilder.cs" />
+    <Compile Include="Midi\ChannelMessageEventArgs.cs" />
+    <Compile Include="Midi\ChannelStopper.cs" />
+    <Compile Include="Midi\ChasedEventArgs.cs" />
+    <Compile Include="Midi\IClock.cs" />
+    <Compile Include="Midi\IMessageBuilder.cs" />
+    <Compile Include="Midi\IMidiMessage.cs" />
+    <Compile Include="Midi\InputDevice.Construction.cs" />
+    <Compile Include="Midi\InputDevice.cs" />
+    <Compile Include="Midi\InputDevice.Events.cs" />
+    <Compile Include="Midi\InputDevice.Fields.cs" />
+    <Compile Include="Midi\InputDevice.Messaging.cs" />
+    <Compile Include="Midi\InputDevice.Properties.cs" />
+    <Compile Include="Midi\InputDevice.PublicMethods.cs" />
+    <Compile Include="Midi\InputDevice.Win32.cs" />
+    <Compile Include="Midi\InvalidShortMessageEventArgs.cs" />
+    <Compile Include="Midi\InvalidSysExMessageEventArgs.cs" />
+    <Compile Include="Midi\KeySignatureBuilder.cs" />
+    <Compile Include="Midi\MessageDispatcher.cs" />
+    <Compile Include="Midi\MetaMessage.cs" />
+    <Compile Include="Midi\MetaMessageEventArgs.cs" />
+    <Compile Include="Midi\MetaTextBuilder.cs" />
+    <Compile Include="Midi\MidiDevice.cs" />
+    <Compile Include="Midi\MidiDeviceException.cs" />
+    <Compile Include="Midi\MidiEvent.cs" />
+    <Compile Include="Midi\MidiFileProperties.cs" />
+    <Compile Include="Midi\MidiHeader.cs" />
+    <Compile Include="Midi\MidiHeaderBuilder.cs" />
+    <Compile Include="Midi\MidiInCaps.cs" />
+    <Compile Include="Midi\MidiInternalClock.cs" />
+    <Compile Include="Midi\MidiOutCaps.cs" />
+    <Compile Include="Midi\NoOpEventArgs.cs" />
+    <Compile Include="Midi\OutputDevice.cs" />
+    <Compile Include="Midi\OutputDeviceBase.cs" />
+    <Compile Include="Midi\OutputStream.cs" />
+    <Compile Include="Midi\PpqnClock.cs" />
+    <Compile Include="Midi\RecordingSession.cs" />
+    <Compile Include="Midi\Sequence.cs" />
+    <Compile Include="Midi\Sequencer.cs" />
+    <Compile Include="Midi\ShortMessage.cs" />
+    <Compile Include="Midi\SongPositionPointerBuilder.cs" />
+    <Compile Include="Midi\StoppedEventArgs.cs" />
+    <Compile Include="Midi\SysCommonMessage.cs" />
+    <Compile Include="Midi\SysCommonMessageBuilder.cs" />
+    <Compile Include="Midi\SysCommonMessageEventArgs.cs" />
+    <Compile Include="Midi\SysExMessage.cs" />
+    <Compile Include="Midi\SysExMessageEventArgs.cs" />
+    <Compile Include="Midi\SysRealtimeMessage.cs" />
+    <Compile Include="Midi\SysRealtimeMessageEventArgs.cs" />
+    <Compile Include="Midi\TempoChangeBuilder.cs" />
+    <Compile Include="Midi\TimeSignatureBuilder.cs" />
+    <Compile Include="Midi\Track.cs" />
+    <Compile Include="Midi\Track.Iterators.cs" />
+    <Compile Include="Midi\Track.Test.cs" />
+    <Compile Include="Midi\TrackReader.cs" />
+    <Compile Include="Midi\TrackWriter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MidiIco.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
